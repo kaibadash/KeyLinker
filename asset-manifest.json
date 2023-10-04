@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/KeyLinker/static/css/main.2e9c4768.css",
+    "main.js": "/KeyLinker/static/js/main.54482f00.js",
+    "static/js/787.8c4dfc53.chunk.js": "/KeyLinker/static/js/787.8c4dfc53.chunk.js",
+    "index.html": "/KeyLinker/index.html",
+    "main.2e9c4768.css.map": "/KeyLinker/static/css/main.2e9c4768.css.map",
+    "main.54482f00.js.map": "/KeyLinker/static/js/main.54482f00.js.map",
+    "787.8c4dfc53.chunk.js.map": "/KeyLinker/static/js/787.8c4dfc53.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e9c4768.css",
+    "static/js/main.54482f00.js"
+  ]
+}
