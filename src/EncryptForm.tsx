@@ -8,11 +8,17 @@ function EncryptForm(props: { initialTarget: string }) {
   const [target, setTarget] = useState(props.initialTarget);
   const [secret, setSecret] = useState('');
   const [result, setResult] = useState('');
+  const [resultURL, setResultURL] = useState('');
 
   const handleEncrypt = () => {
     if (target && secret) {
       const encrypted = AES.encrypt(target, secret).toString();
       setResult(encrypted);
+
+      const currentDomain = window.location.origin;
+      const encodedString = encodeURIComponent(encrypted);
+      const finalURL = `${currentDomain}/KeyLinker/${encodedString}`;
+      setResultURL(finalURL);
     }
   };
   const handleDecrypt = () => {
@@ -59,6 +65,10 @@ function EncryptForm(props: { initialTarget: string }) {
           value={result}
           readOnly
         />
+      </div>
+
+      <div className="form-group">
+        <p><a href={resultURL}>{resultURL}</a></p>
       </div>
     </div>
   );
